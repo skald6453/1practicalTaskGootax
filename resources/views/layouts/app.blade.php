@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -52,10 +53,11 @@
                                 </li>
                             @endif
                         @else
-                            <a class="navbar-brand" href="#">
+                            <a class="navbar-brand" href="{{ route('feedback') }}" style="font-size: 18px;">Оставить отзыв</a>
+                            <a class="navbar-brand" href="#" style="font-size: 18px;">
                                 {{ Auth::user()->email }}
                             </a>
-                            <a class="navbar-brand" href="{{ route('logout') }}"
+                            <a class="navbar-brand" href="{{ route('logout') }}" style="font-size: 18px;"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
@@ -66,6 +68,7 @@
                                 </div>
                             </li>
                         @endguest
+
                     </ul>
                 </div>
             </div>
