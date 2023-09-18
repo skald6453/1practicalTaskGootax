@@ -27,3 +27,7 @@ Route::get('/feedback', [App\Http\Controllers\FeedbackController::class, 'show']
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+
+Route::post('/submitted', [App\Http\Controllers\SubmittedFeedbackController::class, 'create'])->name('submitted');
+
+
