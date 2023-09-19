@@ -17,16 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Auth::routes();
-
 
 Route::get('/feedback', [App\Http\Controllers\FeedbackController::class, 'show'])->name('feedback');
 
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
 
 Route::post('/submitted', [App\Http\Controllers\SubmittedFeedbackController::class, 'create'])->name('submitted');
 

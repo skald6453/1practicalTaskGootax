@@ -53,22 +53,22 @@
                                 </li>
                             @endif
                         @else
+
                             <a class="navbar-brand" href="{{ route('feedback') }}" style="font-size: 18px;">Оставить отзыв</a>
                             <a class="navbar-brand" href="#" style="font-size: 18px;">
                                 {{ Auth::user()->email }}
                             </a>
+
                             <a class="navbar-brand" href="{{ route('logout') }}" style="font-size: 18px;"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-                           <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
 
+                           <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                               @csrf
+                           </form>
+                        @endguest
                     </ul>
                 </div>
             </div>

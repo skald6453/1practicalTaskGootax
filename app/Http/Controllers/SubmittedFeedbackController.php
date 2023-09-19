@@ -8,9 +8,8 @@ use Illuminate\Support\Facades\Validator;
 
 class SubmittedFeedbackController extends Controller
 {
-
-    protected function create(Request $request){
-
+    protected function create(Request $request)
+    {
         $validated= $request->validate([
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'feedback' => ['required', 'string', 'min:10'],
@@ -25,5 +24,4 @@ class SubmittedFeedbackController extends Controller
 
         return view('submittedFeedback');
     }
-
 }
